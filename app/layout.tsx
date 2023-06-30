@@ -1,3 +1,4 @@
+import Sidebar from '@/components/Sidebar'
 import './globals.css'
 import { Figtree } from 'next/font/google'
 
@@ -8,15 +9,11 @@ export const metadata = {
   description: 'Listen to Bops',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={font.className}>
-        {children}
+        <Sidebar>{children}</Sidebar>
       </body>
     </html>
   )
